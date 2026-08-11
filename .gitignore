@@ -1,0 +1,17 @@
+# Local jars - never commit these
+mods/*.jar
+*.jar
+
+# Export artifacts
+*.mrpack
+*.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Packwiz local cache if any
+.packwiz/

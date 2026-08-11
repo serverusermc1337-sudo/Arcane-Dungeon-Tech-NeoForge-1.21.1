@@ -1,0 +1,6 @@
+# Ignore export artifacts and local junk
+*.mrpack
+*.zip
+.git/
+.idea/
+.vscode/

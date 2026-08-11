@@ -1,6 +1,7 @@
 name = "Arcane Dungeon Tech"
 author = "serverusermc1337-sudo"
-version = "0.1.0-skeleton"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
@@ -8,6 +9,7 @@ hash-format = "sha256"
 
 [versions]
 minecraft = "1.21.1"
-neoforge = "21.1."  # pin exact NeoForge version after first successful launch
+neoforge = "21.1.172"   # Update this to the exact NeoForge version you use after first successful launch
 
-# After adding mods with packwiz, run: packwiz refresh
+[options]
+acceptable-game-versions = ["1.21.1", "1.21"]
