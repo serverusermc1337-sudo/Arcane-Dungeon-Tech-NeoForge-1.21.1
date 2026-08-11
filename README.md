@@ -2,37 +2,41 @@
 
 **NeoForge 1.21.1** • Magic + Exploration + Dungeons + Tech
 
-Distributed the **correct** way: **Packwiz metadata only**. No mod JARs are stored in this repository. Launchers download the mods.
+## Testing method
+
+**Primary:** CurseForge App  
+See **`docs/CURSEFORGE_APP_TESTING.md`** for the exact steps.
 
 ## What this repo contains
 
-- `pack.toml` + `index.toml` — Packwiz root
-- `config/ftbquests/` — Quest structure + starter chapter
-- `docs/` — Design documents + exact Packwiz workflow
+- Packwiz skeleton (`pack.toml` + `index.toml`) for later clean distribution
+- FTB Quests structure + starter chapter
+- Design docs and workflows
 
-## Quick start (for you, the pack author)
+## Quick path (right now)
 
-1. Install packwiz (`go install github.com/packwiz/packwiz@latest`)
-2. Clone this repo
-3. Follow **`docs/PACKWIZ_WORKFLOW.md`** to add the core mods with `packwiz modrinth install` / `packwiz curseforge install`
-4. Run `packwiz refresh` after batches
-5. Test in Prism / a NeoForge 1.21.1 instance
-6. Export with `packwiz modrinth export` or `packwiz curseforge export` when ready
+1. Open CurseForge App
+2. Create NeoForge **1.21.1** instance, 10–16 GB RAM
+3. Install the core mods listed in `docs/CURSEFORGE_APP_TESTING.md`
+4. Copy `config/ftbquests` from this repo into the instance
+5. Launch → `/ftbquests editing_mode true` and build the quest book
 
-## Quest design
+Only after the core loop is fun and stable should you move the final mod list into Packwiz and export.
 
-See `docs/QUEST_TREE_DESIGN.md` and the sample chapter in `config/ftbquests/quests/chapters/00_getting_started.snbt`.
+## Docs
 
-Use `/ftbquests editing_mode true` in-game to expand the book.
+- `docs/CURSEFORGE_APP_TESTING.md` — **start here**
+- `docs/PACKWIZ_WORKFLOW.md` — for clean export later
+- `docs/QUEST_TREE_DESIGN.md` — full chapter plan
+- `docs/CORE_MODLIST.md` — theme-focused mod categories
 
-## Core philosophy
+## Distribution (later)
 
-- Theme first, mod count second.
-- Magic path and Tech path run in parallel and meet in the mid/late game.
-- Dungeons and structures feed both paths.
-- Start with a stable ~150–250 mod core. Only expand after the loop feels good.
+When ready:
 
-## Links
+```bash
+packwiz curseforge export   # for CurseForge
+packwiz modrinth export     # for Modrinth
+```
 
-- Packwiz docs: https://packwiz.infra.link/
-- This repo: https://github.com/serverusermc1337-sudo/Arcane-Dungeon-Tech-NeoForge-1.21.1
+No mod JARs are stored in this repository. That is intentional.
