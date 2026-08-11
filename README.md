@@ -9,15 +9,17 @@ See `docs/CURSEFORGE_APP_TESTING.md`
 
 ## Automated CurseForge export
 
-See **`docs/AUTOMATED_EXPORT.md`**
-
-Quick local export (after mods are in Packwiz metadata):
+See `docs/AUTOMATED_EXPORT.md`
 
 ```bash
 ./scripts/export-curseforge.sh
 ```
 
-Or run the **Export CurseForge Pack** workflow from the GitHub Actions tab.
+Or run **Export CurseForge Pack** from the GitHub Actions tab.
+
+## Troubleshooting
+
+See **`docs/TROUBLESHOOTING.md`** for common launch, quest, Packwiz, and import failures.
 
 ## What this repo contains
 
@@ -25,13 +27,14 @@ Or run the **Export CurseForge Pack** workflow from the GitHub Actions tab.
 - FTB Quests structure + starter chapter
 - CurseForge App testing guide
 - Automated export (local script + GitHub Actions)
+- Troubleshooting guide
 
 ## Practical order of work
 
-1. Build & test the pack in **CurseForge App** (install core mods, copy quests, edit book)
-2. When the mod list is stable, mirror it into Packwiz
-3. Use the export script / Actions workflow to produce a CurseForge `.zip`
-4. Re-import that zip into CurseForge App for final validation
-5. Publish when ready
+1. Build & test in **CurseForge App**
+2. Copy quest files from this repo into the instance
+3. Expand the quest book in-game
+4. When the mod list is stable, mirror it into Packwiz
+5. Export and re-import the CurseForge zip for final validation
 
 No mod JARs are stored in this repository by design.
