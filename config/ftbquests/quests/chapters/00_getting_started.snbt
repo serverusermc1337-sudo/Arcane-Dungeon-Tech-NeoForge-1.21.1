@@ -1,0 +1,147 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "00_getting_started"
+	group: "foundation"
+	icon: {
+		id: "minecraft:grass_block"
+	}
+	id: "00_getting_started"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "welcome"
+			title: "Welcome, Explorer"
+			description: [
+				"You wake in a world of magic, machines, and ancient ruins."
+				"This quest book will guide your first steps."
+				"Progress at your own pace — magic and tech paths open in parallel."
+			]
+			icon: {
+				id: "minecraft:book"
+			}
+			tasks: [
+				{
+					id: "welcome_task"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "welcome_reward"
+					type: "item"
+					item: {
+						id: "minecraft:bread"
+						count: 8
+					}
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 0.0d
+			id: "punch_tree"
+			title: "First Resources"
+			dependencies: ["welcome"]
+			description: [
+				"Gather basic materials. Wood and stone are still the foundation of everything."
+			]
+			icon: {
+				id: "minecraft:oak_log"
+			}
+			tasks: [
+				{
+					id: "gather_logs"
+					type: "item"
+					item: {
+						id: "minecraft:oak_log"
+					}
+					count: 16
+				}
+			]
+			rewards: [
+				{
+					id: "logs_reward"
+					type: "item"
+					item: {
+						id: "minecraft:stick"
+						count: 16
+					}
+				}
+			]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			id: "basic_tools"
+			title: "Basic Tools"
+			dependencies: ["punch_tree"]
+			description: [
+				"Craft a full set of stone tools. You will need them for early mining and combat."
+			]
+			icon: {
+				id: "minecraft:stone_pickaxe"
+			}
+			tasks: [
+				{
+					id: "stone_pick"
+					type: "item"
+					item: {
+						id: "minecraft:stone_pickaxe"
+					}
+				}
+				{
+					id: "stone_sword"
+					type: "item"
+					item: {
+						id: "minecraft:stone_sword"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "tools_reward"
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						count: 16
+					}
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: 0.0d
+			id: "first_shelter"
+			title: "First Shelter"
+			dependencies: ["basic_tools"]
+			description: [
+				"Build a simple shelter before night falls. The world is more dangerous than it looks."
+			]
+			icon: {
+				id: "minecraft:crafting_table"
+			}
+			tasks: [
+				{
+					id: "crafting_table_task"
+					type: "item"
+					item: {
+						id: "minecraft:crafting_table"
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "shelter_reward"
+					type: "item"
+					item: {
+						id: "minecraft:bed"
+					}
+				}
+			]
+		}
+	]
+}

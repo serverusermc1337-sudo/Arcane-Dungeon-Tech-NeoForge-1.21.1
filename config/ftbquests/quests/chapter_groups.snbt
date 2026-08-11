@@ -1,0 +1,52 @@
+{
+	default_quest_shape: ""
+	group_order: [
+		"foundation"
+		"exploration"
+		"dungeons"
+		"magic"
+		"tech"
+		"logistics"
+		"advanced"
+		"endgame"
+		"qol"
+	]
+	groups: [
+		{
+			id: "foundation"
+			title: "Foundation"
+		}
+		{
+			id: "exploration"
+			title: "Exploration"
+		}
+		{
+			id: "dungeons"
+			title: "Dungeons & Structures"
+		}
+		{
+			id: "magic"
+			title: "Magic Path"
+		}
+		{
+			id: "tech"
+			title: "Tech Path"
+		}
+		{
+			id: "logistics"
+			title: "Logistics & Storage"
+		}
+		{
+			id: "advanced"
+			title: "Advanced & Integration"
+		}
+		{
+			id: "endgame"
+			title: "Dimensions & Endgame"
+		}
+		{
+			id: "qol"
+			title: "QoL & Mastery"
+		}
+	]
+}
