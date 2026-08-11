@@ -2,41 +2,36 @@
 
 **NeoForge 1.21.1** • Magic + Exploration + Dungeons + Tech
 
-## Testing method
+## Testing
 
 **Primary:** CurseForge App  
-See **`docs/CURSEFORGE_APP_TESTING.md`** for the exact steps.
+See `docs/CURSEFORGE_APP_TESTING.md`
+
+## Automated CurseForge export
+
+See **`docs/AUTOMATED_EXPORT.md`**
+
+Quick local export (after mods are in Packwiz metadata):
+
+```bash
+./scripts/export-curseforge.sh
+```
+
+Or run the **Export CurseForge Pack** workflow from the GitHub Actions tab.
 
 ## What this repo contains
 
-- Packwiz skeleton (`pack.toml` + `index.toml`) for later clean distribution
+- Packwiz skeleton for clean distribution
 - FTB Quests structure + starter chapter
-- Design docs and workflows
+- CurseForge App testing guide
+- Automated export (local script + GitHub Actions)
 
-## Quick path (right now)
+## Practical order of work
 
-1. Open CurseForge App
-2. Create NeoForge **1.21.1** instance, 10–16 GB RAM
-3. Install the core mods listed in `docs/CURSEFORGE_APP_TESTING.md`
-4. Copy `config/ftbquests` from this repo into the instance
-5. Launch → `/ftbquests editing_mode true` and build the quest book
+1. Build & test the pack in **CurseForge App** (install core mods, copy quests, edit book)
+2. When the mod list is stable, mirror it into Packwiz
+3. Use the export script / Actions workflow to produce a CurseForge `.zip`
+4. Re-import that zip into CurseForge App for final validation
+5. Publish when ready
 
-Only after the core loop is fun and stable should you move the final mod list into Packwiz and export.
-
-## Docs
-
-- `docs/CURSEFORGE_APP_TESTING.md` — **start here**
-- `docs/PACKWIZ_WORKFLOW.md` — for clean export later
-- `docs/QUEST_TREE_DESIGN.md` — full chapter plan
-- `docs/CORE_MODLIST.md` — theme-focused mod categories
-
-## Distribution (later)
-
-When ready:
-
-```bash
-packwiz curseforge export   # for CurseForge
-packwiz modrinth export     # for Modrinth
-```
-
-No mod JARs are stored in this repository. That is intentional.
+No mod JARs are stored in this repository by design.
