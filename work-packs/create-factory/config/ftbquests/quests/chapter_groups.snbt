@@ -1,0 +1,9 @@
+{
+	group_order: ["factory"]
+	groups: [
+		{
+			id: "factory"
+			title: "Factory"
+		}
+	]
+}

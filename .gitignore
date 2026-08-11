@@ -5,6 +5,7 @@ mods/*.jar
 # Export artifacts
 *.mrpack
 *.zip
+exports/
 
 # OS / editor
 .DS_Store

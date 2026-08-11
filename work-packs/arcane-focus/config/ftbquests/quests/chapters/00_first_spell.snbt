@@ -1,0 +1,30 @@
+{
+	default_quest_shape: "square"
+	filename: "00_first_spell"
+	group: "arcana"
+	icon: { id: "minecraft:enchanted_book" }
+	id: "00_first_spell"
+	order_index: 0
+	quests: [
+		{
+			id: "welcome_mage"
+			title: "Welcome, Mage"
+			x: 0.0d
+			y: 0.0d
+			description: ["This workpack is for magic progression practice."]
+			icon: { id: "minecraft:book" }
+			tasks: [{ id: "t1", type: "checkmark" }]
+			rewards: [{ id: "r1", type: "item", item: { id: "minecraft:bread", count: 8 } }]
+		}
+		{
+			id: "open_spellbook"
+			title: "Open the Spellbook"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["welcome_mage"]
+			description: ["Obtain your first spell source and cast something basic."]
+			icon: { id: "minecraft:amethyst_shard" }
+			tasks: [{ id: "t2", type: "checkmark" }]
+		}
+	]
+}

@@ -2,39 +2,32 @@
 
 **NeoForge 1.21.1** • Magic + Exploration + Dungeons + Tech
 
-## Testing
+## Main pack
 
-**Primary:** CurseForge App  
-See `docs/CURSEFORGE_APP_TESTING.md`
+- Testing: CurseForge App → `docs/CURSEFORGE_APP_TESTING.md`
+- Export automation: `docs/AUTOMATED_EXPORT.md`
+- Troubleshooting: `docs/TROUBLESHOOTING.md`
 
-## Automated CurseForge export
+## Extra work material (multiple packs)
 
-See `docs/AUTOMATED_EXPORT.md`
+Additional themed packs you can import/use in CurseForge App:
 
-```bash
-./scripts/export-curseforge.sh
-```
+- `work-packs/create-factory`
+- `work-packs/arcane-focus`
+- `work-packs/dungeon-delver`
+- `work-packs/vanilla-plus`
 
-Or run **Export CurseForge Pack** from the GitHub Actions tab.
+See **`docs/WORK_PACKS.md`** and `work-packs/README.md`.
 
-## Troubleshooting
+Each has:
+- Packwiz skeleton
+- Suggested core mod list for CurseForge App
+- Starter FTB Quests chapter (except vanilla-plus baseline)
 
-See **`docs/TROUBLESHOOTING.md`** for common launch, quest, Packwiz, and import failures.
+## Practical order
 
-## What this repo contains
-
-- Packwiz skeleton for clean distribution
-- FTB Quests structure + starter chapter
-- CurseForge App testing guide
-- Automated export (local script + GitHub Actions)
-- Troubleshooting guide
-
-## Practical order of work
-
-1. Build & test in **CurseForge App**
-2. Copy quest files from this repo into the instance
-3. Expand the quest book in-game
-4. When the mod list is stable, mirror it into Packwiz
-5. Export and re-import the CurseForge zip for final validation
-
-No mod JARs are stored in this repository by design.
+1. Use CurseForge App to create separate instances per work pack
+2. Install the listed core mods
+3. Copy that pack's `config/ftbquests` if present
+4. Work / test / design
+5. Only later mirror stable lists into Packwiz and export zips

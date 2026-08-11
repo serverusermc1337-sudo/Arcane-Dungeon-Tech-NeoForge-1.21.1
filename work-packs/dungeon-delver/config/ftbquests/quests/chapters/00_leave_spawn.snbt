@@ -1,0 +1,30 @@
+{
+	default_quest_shape: "square"
+	filename: "00_leave_spawn"
+	group: "delve"
+	icon: { id: "minecraft:iron_sword" }
+	id: "00_leave_spawn"
+	order_index: 0
+	quests: [
+		{
+			id: "welcome_delver"
+			title: "Leave Spawn"
+			x: 0.0d
+			y: 0.0d
+			description: ["This workpack is for structure and dungeon testing.", "Travel outward. Large structures are often pushed away from spawn."]
+			icon: { id: "minecraft:map" }
+			tasks: [{ id: "t1", type: "checkmark" }]
+			rewards: [{ id: "r1", type: "item", item: { id: "minecraft:bread", count: 16 } }]
+		}
+		{
+			id: "find_structure"
+			title: "Find a Structure"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["welcome_delver"]
+			description: ["Locate any major structure and clear it once."]
+			icon: { id: "minecraft:mossy_cobblestone" }
+			tasks: [{ id: "t2", type: "checkmark" }]
+		}
+	]
+}

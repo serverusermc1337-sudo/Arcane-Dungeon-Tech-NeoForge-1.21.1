@@ -1,0 +1,9 @@
+{
+	group_order: ["arcana"]
+	groups: [
+		{
+			id: "arcana"
+			title: "Arcana"
+		}
+	]
+}

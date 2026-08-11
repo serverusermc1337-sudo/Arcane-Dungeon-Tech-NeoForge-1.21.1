@@ -1,0 +1,30 @@
+{
+	default_quest_shape: "square"
+	filename: "00_rotation"
+	group: "factory"
+	icon: { id: "minecraft:cog" }
+	id: "00_rotation"
+	order_index: 0
+	quests: [
+		{
+			id: "welcome_factory"
+			title: "Welcome to the Factory"
+			x: 0.0d
+			y: 0.0d
+			description: ["This workpack is for Create progression practice."]
+			icon: { id: "minecraft:book" }
+			tasks: [{ id: "t1", type: "checkmark" }]
+			rewards: [{ id: "r1", type: "item", item: { id: "minecraft:bread", count: 8 } }]
+		}
+		{
+			id: "first_rotation"
+			title: "First Rotation"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["welcome_factory"]
+			description: ["Generate rotational force and move an item with a belt."]
+			icon: { id: "minecraft:redstone" }
+			tasks: [{ id: "t2", type: "checkmark" }]
+		}
+	]
+}
